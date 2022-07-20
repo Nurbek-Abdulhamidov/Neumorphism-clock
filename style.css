@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Nunito:ital@0;1&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e4ebf5;
+}
+.container h1 {
+  font-family: "Nunito", sans-serif;
+  margin-top: -12em;
+  z-index: 2;
+  color: #9baacf;
+}
+.components {
+  position: fixed;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 3rem;
+  box-shadow: 0.8rem 0.8rem 1.4rem #c8d0e7, -0.2rem -0.2rem 1.8rem #fff;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  width: 12rem;
+  height: 12rem;
+  justify-self: center;
+  box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.clock .hand {
+  position: absolute;
+  transform-origin: bottom;
+  bottom: 6rem;
+  border-radius: 0.2rem;
+  z-index: 200;
+}
+.clock .hours {
+  width: 0.4rem;
+  height: 3.2rem;
+  background: #bec8e4;
+}
+.clock .minutes {
+  width: 0.4rem;
+  height: 4.6rem;
+  background: #9baacf;
+}
+.clock .seconds {
+  width: 0.2rem;
+  height: 5.2rem;
+  background: #6d5dfc;
+}
+.clock .point {
+  position: absolute;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: #6d5dfc;
+  z-index: 300;
+}
+.clock .mark {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7,
+    inset -0.2rem -0.2rem 0.5rem #fff;
+}
+.clock .mark::after {
+  content: "";
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  box-shadow: inset 1px 1px 1px #c8d0e7, inset -1px -1px 1px #fff;
+  border-radius: 50%;
+  top: 20%;
+  left: 20%;
+  filter: blur(1px);
+}
+.clock .mark_1,
+.clock .mark_2,
+.clock .mark_3,
+.clock .mark_4 {
+  position: absolute;
+  border-radius: 0.1rem;
+  box-shadow: inset 1px 1px 1px #c8d0e7, inset -1px -1px 1px #fff;
+}
+.clock .mark_1,
+.clock .mark_2 {
+  width: 0.2rem;
+  height: 0.6rem;
+  left: 5.6rem;
+}
+.clock .mark_3,
+.clock .mark_4 {
+  width: 0.6rem;
+  height: 0.2rem;
+  top: 5.6rem;
+}
+.clock .mark_1 {
+  top: 2%;
+}
+.clock .mark_2 {
+  top: 98%;
+  transform: translateY(-0.6rem);
+}
+.clock .mark_3 {
+  left: 2%;
+}
+.clock .mark_4 {
+  left: 98%;
+  transform: translateX(-0.6rem);
+}
